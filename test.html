@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="conti">     
+        <div class="row">    
+          <div class="col-25">    
+          <Label>HOW MANY ROOMS YOUR HOTEL HAVE</Label>   
+          </div>    
+          <div class="col-75">    
+            <input type="number" id="Room_no" name="Room_no" placeholder="">    
+          </div>    
+        </div>    
+        <div class="row">    
+          <div class="col-25">    
+              <Label>PLEASE UPLOAD YOUR HOTEL IMAGE HERE</Label>   
+          </div>    
+          <div class="col-75">    
+              <input type="file" name="h_image" id="h_image">   
+          </div>    
+        </div>   
+        
+        <div class="row">    
+            <div class="col-25">    
+                <Label>IS YOUR HOTEL HAVE A CAB ?</Label> 
+            </div>    
+            <div class="col-75">    
+                    <LAbel>YES</LAbel>
+                    <input type="radio" name="CAB" id="Y" value="YES" name="yes" placeholder="">
+                    <Label>NO</Label>
+                    <input type="radio" name="CAB" id="N" value="NO" name="no"placeholder="">    
+            </div>    
+          </div>  
+          <div class="row">    
+            <div class="col-25">    
+            <Label>IN WHAT MAXIMUM RANGE YOUR HOTEL SEND MECHANIC OR CAB</Label>
+            </div>    
+            <div class="col-75">    
+                <input type="number" name="Max_Range" id="Max_Range" disabled="disabled"/>   
+            </div>    
+          </div>     
+          <script type="text/javascript">
+            $(function(){
+                $("input[name='CAB']").click(function(){
+                    if($("#Y").is(":checked")){
+                        $("#Max_Range").removeAttr("disabled");
+                        $("#Max_Range").focus();
+                    }
+                    else
+                    {
+                        $("#Max_Range").attr("disabled","disabled");
+                    }
+                });
+            });
+        </script>  
+        <div class="r">    
+          <input type="submit" value="Submit">    
+        </div>       
+    </div>    
+    </form> 
+</body>
+</html>

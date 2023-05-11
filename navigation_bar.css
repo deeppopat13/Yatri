@@ -1,0 +1,195 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color:white;
+    width:100%;
+    height: 100vh;
+    background-image: url(../images/bg.png);
+    background-position:top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Langar', cursive;
+    position: static;
+    /* background: url(abc.jpg)no-repeat center center fixed;  */
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+*{
+    box-sizing: border-box;
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-image: linear-gradient(376deg,white -170%, transparent);
+}
+.logo{
+    height: 24px;
+    z-index:2 ;
+    align-self:normal;
+   background-color: white;
+    /* position: fixed; */
+}
+.logo img{
+    height: 300%;
+    object-fit: contain;
+    object-position: top ;
+
+} 
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+.menu li{
+    padding: 20px;
+}
+.menu li a{
+    color: #ffffffcc;
+}
+.sign-up-btn,
+.sign-up-btn-2{
+    color: #17ffa6;
+}
+.sign-up-btn i,
+.sign-up-btn-2 i{
+    margin-left: 4px;
+}
+.menu li a:hover,
+.menu-2 li a:hover{
+    color: #17ffa6;
+    transition: all ease 0.5s;
+}
+.sign-up-btn:hover,
+.sign-up-btn-2:hover{
+    color: #0ab372;
+    transition: all ease 0.5s;
+}
+::selection{
+    color: #121212;
+    background-color: #17ffa6;
+}
+.nav-2,
+.menu-icon,
+.menu-btn{
+    display: none;
+}
+@media(max-width:1000px){
+    .navigation{
+        padding: 30px;
+    }
+    .navigation .menu,
+    .navigation .sign-up-btn{
+        display: none;
+    }
+    .menu-icon{
+        display: block;
+    }
+    nav .menu-icon{
+        cursor: pointer;
+        float: right;
+        padding: 5px;
+        position: relative;
+        user-select: none;
+        z-index: 2;
+    }
+    nav .menu-icon .nav-icon{
+        background-color: #ffffffcc;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background 0.2s ease-out;
+        width: 25px;
+    }
+    nav .menu-icon .nav-icon:before,
+    nav .menu-icon .nav-icon:after{
+        background-color: #ffffffcc;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all ease-out 0.2s;
+        width: 100%;
+    }
+    nav .menu-icon .nav-icon:before{
+        top: 5px;
+    }
+    nav .menu-icon .nav-icon:after{
+        top: -5px;
+    }
+    nav .menu-icon .nav-icon,
+    nav .menu-icon:checked ~ .menu-icon .nav-icon{
+        background-color: transparent;
+    }
+    nav .menu-btn:checked ~ .menu-icon .nav-icon:before{
+        transform: rotate(-45deg);
+        top: 0px;
+    }
+    nav .menu-btn:checked ~ .menu-icon .nav-icon:after{
+        transform: rotate(45deg);
+        top: 0px;
+    }
+    nav .menu-btn{
+        display: none;
+    }
+    .nav-2{
+        display: block;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width:100%;
+        height: 100%;
+        background-color: #000000;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 40px;
+        z-index: 1;
+        display: none;
+        animation: fade 0.3s;
+ 
+    }
+    .menu-2{
+        margin: 0px;
+        padding: 0px;
+    }
+    .menu-2 li a{
+        color: #ffffff;
+        margin: 0px;
+        padding: 20px 0px;
+        font-size: 45px;
+    }
+    .sign-up-btn-2{
+        font-size: 24px;
+    }
+    .sign-up-btn-2 i{
+        font-size: 14px;
+    }
+    nav .menu-btn:checked ~ .nav-2{
+        display: flex;
+    }
+ 
+}
+.menu li i{
+    width: 25px;
+    text-align: center;
+    color: white; 
+}
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.container
+{ 
+    border: 2px solid blue;
+    background-color: black
+} 

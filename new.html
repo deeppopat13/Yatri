@@ -1,0 +1,138 @@
+<!DOCTYPE html>  
+<html>    
+<head>    
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<script src="https://kit.fontawesome.com/4c38f23b8d.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">   
+<link rel="stylesheet" href="hotel_info.css"> 
+<title>Hotel-Information</title> 
+</head>  
+<?php// include('navigation_bar.html');?>    
+<body>    
+<h2>HOTEL INFORMATION</h2>
+ <!-- <form action="<?php //echo htmlspecialchars($_SERVER['PHP_SELF']);?>"" method="post" enctype="multipart/form-data">   -->
+<div class="conti">     
+    <div class="row">    
+      <div class="col-25">    
+      <Label>HOW MANY ROOMS YOUR HOTEL HAVE</Label>   
+      </div>    
+      <div class="col-75">    
+        <input type="number" id="Room_no" name="Room_no" placeholder="">    
+      </div>    
+    </div>    
+    <div class="row">    
+      <div class="col-25">    
+          <Label>PLEASE UPLOAD YOUR HOTEL IMAGE HERE</Label>   
+      </div>    
+      <div class="col-75">    
+          <input type="file" name="h_image" id="h_image">   
+      </div>    
+    </div>    
+    <div class="row">    
+        <div class="col-25">    
+            <Label>IS YOUR HOTEL HAVE A CAB ?</Label> 
+        </div>    
+        <div class="col-75">    
+                <LAbel>YES</LAbel>
+                <input type="radio" name="CAB" id="Y" value="YES" name="yes" placeholder="">
+                <Label>NO</Label>
+                <input type="radio" name="CAB" id="N" value="NO" name="no"placeholder="">    
+        </div>    
+      </div>    
+    <div class="row">    
+      <div class="col-25">    
+      <Label>IS YOUR HOTEL HAVE A MECHANIC ?<BR></Label>   
+      </div>    
+      <div class="col-75">    
+                <LAbel>YES</LAbel>
+                <input type="radio" name="MECHANIC" id="Y" value="YES" name="yes" placeholder="">
+                <Label>NO</Label>
+                <input type="radio" name="MECHANIC" id="N" value="NO" name="no"placeholder="">  
+      </div>    
+    </div>   
+    <div class="row">    
+      <div class="col-25">    
+      <Label>IN WHAT MAXIMUM RANGE YOUR HOTEL SEND MECHANIC OR CAB</Label>
+      </div>    
+      <div class="col-75">    
+          <input type="number" name="Max_Range" id="Max_Range" disabled="disabled">   
+      </div>    
+    </div> 
+   <script type="text/javascript">
+            $(function(){
+                $("input[name='MECHANIC']").click(function(){
+                    if($("#Y").is(":checked")){
+                        $("#Max_Range").removeAttr("disabled");
+                        $("#Max_Range").focus();
+                    }
+                    else
+                    {
+                        $("#Max_Range").attr("disabled","disabled");
+                    }
+                });
+            });
+        </script>   
+    <script type="text/javascript">
+            $(function(){
+                $("input[name='CAB']").click(function(){
+                    if($("#Y").is(":checked")){
+                        $("#Max_Range").removeAttr("disabled");
+                        $("#Max_Range").focus();
+                    }
+                    else
+                    {
+                        $("#Max_Range").attr("disabled","disabled");
+                    }
+                });
+            });
+     </script>  
+    <div class="r">    
+      <input type="submit" value="Submit">    
+    </div>       
+</div>    
+<!-- </form> -->
+    
+</body>    
+</html>   
+<!-- <?php
+ /* if($_SERVER["REQUEST_METHOD"]=="POST")
+  {
+     $numberOfRooms=$_POST["Room_no"];
+     $h_image=$_FILES["h_image"];
+     $image_name=$h_image['name'];
+     $image_path=$h_image['tmp_name'];
+     $image_error=$h_image['error'];
+     $image_type=strtolower($h_image['type']);
+
+    if($image_error == 0 )
+    {
+      if($image_type == "image/png" or $image_type == "image/jpeg" or $image_type =="image/jpg" )
+      {
+          $destination_image_folder='uploaded_image/'.$image_name;
+          move_uploaded_file($image_path,$destination_image_folder);
+      }
+      else
+      {
+        echo "PLS Enter Valid Type of Image";
+      }
+    }
+    if(isset($_REQUEST['CAB']))
+    {
+      $cabAvaliable=$_REQUEST['CAB'];
+    }
+    else
+    {
+      $cabAvaliable="";
+    }
+    if(isset($_REQUEST['MECHANIC']))
+    {
+     $MechanicAvailable=$_REQUEST['MECHANIC'];
+    }
+    else 
+    {
+      $MechanicAvailable="";
+    }   
+
+
+  }*/
+?>  -->
