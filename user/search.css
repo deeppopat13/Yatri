@@ -1,0 +1,70 @@
+body {
+    font-family: 'Langar', cursive;
+    margin: 0;
+    background-color: #fff;
+  }
+  
+  html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  .ot{ 
+    /* background-color: black; */
+    color: #000;
+  }
+.heading{
+  margin: 0%;
+ /* background-color: #000; */
+ color:#000 ; 
+}
+  .column {
+    float: left;
+    /* width: 50%; */
+    /* margin-bottom: 16px; */
+    padding: 0 8px;
+    background-color: white;
+  }
+ .picture
+ {
+   float: left;
+   /* width: 50%; */
+ } 
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+  }
+  
+  .about-section {
+    padding: 50px;
+    text-align: center;
+    background-color:  #a6adbc;
+    color: rgb(0, 0, 0);
+    font: size 500px;
+    border: 5px solid lavenderblush;
+}
+ /* h1{
+     text-align: center;
+ }*/
+ .about-section img{
+    float: left; 
+      width: 30%;
+     /* height: 30%; */
+ }
+ /* .about-section .text{ */
+  /* background-color: black; */
+   /* float: right;   */
+  /* width: 50%;
+   height: 30%; */
+/* } */
+  .text a{
+    background: #111883;
+    color:#fff;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 30px;
+}

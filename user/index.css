@@ -1,0 +1,61 @@
+/* */
+html {
+    box-sizing: border-box;
+  }
+body{
+    margin: 0;
+    padding: 0;
+    height: 100; 
+    background-image: url(xy.jpg);
+    -webkit-background-size: contain ;
+    background-size:auto;    
+    background-position: center center;
+    /* background-repeat: no-repeat; */
+    font-family: 'Langar', cursive;
+   
+} 
+.wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: block; 
+}
+.wrapper h2
+{
+    padding: 0;
+    margin: 0;
+    color: floralwhite;
+    text-shadow: 0 2px 0 rgba(71, 3, 110, 0.5);
+    font-size: 60px;
+}
+/* .wrapper p{
+    color: #040727;
+    font-size: 18px;
+    margin: 0;
+    line-height: 35px;
+} */
+.wrapper a{
+    background: #111883;
+    color:#fff;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 30px;
+}
+span::before{
+    content: '';
+    animation: animate infinite 8s;
+}
+@keyframes animate{
+    0%{
+        content: 'Book Rooms For Hours';
+    }
+    50%{
+        content: 'Book CAB';
+    }
+    100%{
+        content: 'Book Mechanic';
+    }
+}
