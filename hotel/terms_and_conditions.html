@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link href='feedback.css' rel='stylesheet' type='text/css' />
+    <script src="https://kit.fontawesome.com/4c38f23b8d.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script
+    
+</head>
+<style>
+    *{
+        margin: 0.5pc;
+    }
+    a{
+        background: #111883;
+        color:#fff;
+        text-decoration: none;
+        padding: 10px 25px;
+        border-radius: 5px;
+        display: inline-block;
+        margin-top: 30px;
+    }
+</style>
+
+<script type="text/javascript">
+                  $(function(){
+                    $("input[name='terms']").click(function(){
+                        if($("#agree").is(":checked")){
+                          status1 = 1;
+                          check();
+                     
+                    }
+                    else
+                    {
+                       status1 = 0;
+                       check();
+                    }
+                  });
+                  });
+              
+
+    function check()
+    {
+          if(status == 1)
+          {         $("#submit").removeAttr("disabled");
+                      $("#submit").focus();
+          }
+          else
+          {
+            $("#submit").attr("disabled","disabled");
+          
+          }
+    }
+    </script>   
+<body>
+    <div class="container2">
+        <h1 align="center">Terms and Condition!</h1>
+        <hr>
+        <div class="license">
+            <ul type="circle">
+                <h9 style="margin:0.5pc">
+                    <li>Your Hotel Have To Gave Has a 12% Commission To Par Booking.</li>
+                    <li>Hotels Have To Give Your Public As Well As Private Key Of Your Stripe Account For The Payment Process. We Required Keys
+                        For Straight Forward Transactions Due To That The Texes Are Not Pay Double Time.</li>
+                    <li>By Accepting Terms And Conditions Site Is Giving a Confirmation That The Given Keys Are Fully
+                        Secured And Will Be Only Used For The Transactions Purpose.</li>
+                    <li>If We Found Hotels Performing Any Inappropriate Actions Site Have All The Rights To Remove That
+                        Perticular Hotel.</li>
+                </h9>
+            </ul>
+        </div>
+        
+        <table>
+            <tr>
+                <td><a href="new_account.php">Back To Sign In Page</a></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

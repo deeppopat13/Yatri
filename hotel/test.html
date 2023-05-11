@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- Somehow I got an error, so I comment the title, just uncomment to show -->
+    <!-- <title>Image Slideshow Animation | CodingNepal</title> -->
+    <link rel="stylesheet" href="test.css">
+  </head>
+  <body>
+    
+    <div class="content">
+      <div class="images">
+        <img src="s1.jpg">
+        <img src="s2.jpg">
+        <img src="abc.jpg">
+        <img src="home.jpg">
+        <img src="home1.jpg">
+      </div>
+</div>
+<script>
+      var indexValue = 0;
+      function slideShow(){
+        setTimeout(slideShow, 5000);
+        var x;
+        const img = document.querySelectorAll("img");
+        for(x = 1; x < img.length; x++){
+          img[x].style.display = "none";
+        }
+        indexValue++;
+        if(indexValue > img.length){indexValue = 1}
+        img[indexValue -1].style.display = "block";
+      }
+      slideShow();
+    </script>
+
+  </body>
+</html>
+
